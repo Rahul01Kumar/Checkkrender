@@ -3,8 +3,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const dotenv=require('dotenv');
-dotenv.config();
+// const dotenv=require('dotenv');
+// dotenv.config();
 const path = require('path');
 
 
@@ -12,7 +12,7 @@ const app = express();
 const port = process.env.PORT || 8080;
 
 // Connect to MongoDB (replace 'your-mongodb-uri' with your actual MongoDB connection string)
-mongoose.connect(process.env.PORT_URI, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb+srv://admin:admin123@mydb.wjhgkmu.mongodb.net/?retryWrites=true&w=majority&appName=mydb', { useNewUrlParser: true, useUnifiedTopology: true });
 
 // Define a schema for the data
 const userSchema = new mongoose.Schema({
